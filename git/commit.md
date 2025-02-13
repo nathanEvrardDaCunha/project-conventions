@@ -79,3 +79,23 @@ We hesitate between build or chore.
 > add automatic update for newest prettier version
 ```
 
+---
+
+<!-- 
+TODO:
+### Prefer imperative present tense
+### Prefer including optional scope refering to a codebase section
+### Prefer mentioning optional BREAKING CHANGE and !
+### Prefer including optional commit description
+
+TODO: Explain for each section, including the existing one, why is it important to do thing like this.
+
+TODO: Create a table of content at the start of the file.
+
+IDEA: Add a conclusion with one or multiple practical and possibly opinionated example on the habit to take for implementing this in practice. 
+
+TODO:
+Include reference such as:
+- https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
+- https://www.conventionalcommits.org/en/v1.0.0/
+- https://semver.org/#summary -->
