@@ -1,19 +1,19 @@
 # Git Commit
 
-## Overview
+## 1. Overview
 
 This file serves as a curated collection of git commit conventions and best practices gathered from various online resources and articles. It provides a centralized reference point for developers seeking guidance on commit organization and readability.
 
-## Purpose
+## 2. Purpose
 
 The primary goal of this collection is to aggregate useful commit practices and conventions in one accessible location. While these guidelines may not be universally applicable, they offer valuable insights for developers looking to improve their commit quality.
 
-## Introduction to Semantic Commit
+## 3. Introduction to Semantic Commit
 
 <!-- TODO: Make this section more formal and professional in tone -->
 <!-- IDEA: It might be possible to make it tool agnostic but would need to rewrite things other than for git and for the majority of versioning tools. -->
 
-### Why do we write Git Semantic Commit ?
+### 3.1. Why do we write Git Semantic Commit ?
 
 Git is easy to grasp and use. But the way you write code for your hooby project, small professional project or large codebase can vary considerably. Because of many factor like project and team size, it become increasingly difficult to make meaningfull commit following guideline everyone understand. 
 
@@ -21,43 +21,43 @@ Not only that, but keeping track of which commit make the cut to the new version
 
 That where Git Semantic Commit appear.
 
-### What is Git Semantic Commit ?
+### 3.2. What is Git Semantic Commit ?
 
-Git Semantic Commit (complementary yet distinct from Semantic Versioning concept) are common practices helping team and individuals to write more meaningful commit by including relevant element like prefix, description, scope, body, footer... 
+Git Semantic Commit (complementary yet distinct from Semantic Versioning concept) are common practices helping team and individuals to write more meaningful commit by including relevant element like type, description, scope, body, footer... 
 
 Thanks to those, it become easier for teams to quickly navigate through the entire repository history of any project and quickly access the commit they are searching.
 
 On top of that, thanks to some automation tool, writing commit following a clear format can help us automatically know what to include or exclude from releases of our project, especially when the new version include breaking change for the older one.
 
-### How do we use Git Semantic Commit ?
+### 3.3. How do we use Git Semantic Commit ?
 
 To write semantic commit, you just need to decide of the guidelines you and your team wish to use in your project and follow them as rigourously as possible.
 
 Not every suggesstion in the following part below are to be implemented, nor can they be followed every single time. but while there are always cases where one need to bypass the rules they set themselves, we recommend you to abide to it as much as possible.
 
-## Conventions 
+## 4. Conventions 
 
-### Mainstream semantic commit template
+### 4.1 Mandatory semantic commit template
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+
+The type, which will we see in detail below, guide us to what is the main purpose of the change commited.
+
+The description give us additional but mandatory context about what has been changed.
 
 ```md
-# Popular template used by the majority of professional
+# Skeleton of mandatory commit
 
-fix: patch calculator divide by zero edge case
-^--^  ^-------------------------------------^
-|     |
-|     +-> Summary in present tense.
-|
-+-------> Prefix: feat, fix, refactor (see below...).
+<type>: <description>
+> fix: patch calculator divide by zero edge case
 ```
 
-
-### Mainstream semantic commit prefixs
+### 4.2. Mainstream semantic commit types
 
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
-Most common semantic prefix
+Most common semantic types
 
 ```md
-# Most popular commit prefix for semantic
+# Most popular commit types for semantic
 
 ## Features - `feat:`
 New feature users can interact with.
@@ -89,10 +89,10 @@ Regular system tasks and dependance maintenance.
 ```
 
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
-Less common but as important semantic prefix
+Less common but as important semantic types
 
 ```md
-# Less popular but important commit prefix for semantic
+# Less popular but important commit types for semantic
 
 ## Performance - `perf:`
 Change that improve application performance.
@@ -107,7 +107,7 @@ Addressing security issues or vulnerabilities
 > security: update bcrypt to patch dependency vulnerability
 ```
 
-### Importance of Scope
+### 4.3. Importance of Scope
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
 Scope allow you to explicitly tell which part of your code does your commit affect. 
 If it is too difficult to attribute only one part to your commit or the changes are globals, you can left it empty.
@@ -122,7 +122,7 @@ refactor(auth): rename username validation function
      +----> Scope: add optional context.
 ```
 
-### Importance of Body
+### 4.4. Importance of Body
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
 - What applying the commit will do
 -> What before the commit
@@ -144,9 +144,9 @@ Add pure function "convertCelsiusTokelvin()" to convert the original data to kel
 +----> Scope: add optional context.
 ```
 
-## Practices
+## 5. Practices
 
-### Start your commit with prefix
+### 5.1. Start your commit with type
 
 ```md
 # Examples - Good practice
