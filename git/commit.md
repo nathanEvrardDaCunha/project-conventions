@@ -224,10 +224,13 @@ One way to clearly inform people about what need to be keep track of and what is
 
 ## 5. Practices
 
-### 5.1. Start your commit with type
+### 5.1. Include relevant type at the start
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
+Including the relevant type at the start of your commit is one of the best way to quickly indicate to others developers what you did so they can quickly navigate and find what they need.
+
 ```md
 # Examples - Good practice
+
 We understand what is added and who.
 > feat: add account deletion for free user
 
@@ -238,6 +241,7 @@ We understand what is rewriten and how.
 > refactor: rewrite billing system to singleton pattern
 
 # Examples - Bad practice
+
 We hesitate between security or bug fix.
 > patch validation dependancies vulnerabilities
 
@@ -247,4 +251,3 @@ We hesitate between performance or style.
 We hesitate between build or chore.
 > add automatic update for newest prettier version
 ```
-
