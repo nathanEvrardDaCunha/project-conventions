@@ -295,3 +295,31 @@ We understand what will happen.
 We can only guess what will happen but not how much.
 > docs(commit): add scope recommendation in practice section 
 ```
+
+### 5.4. Include relevant informations footer whenever necessarry
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+When your commit contain important information notably about changes breaking incompatible with older version, an already existing issue, request... Always add it to inform your peers.
+If you've nothing that could be included in the footer, don't add one.
+
+Also, only include usefull information. If the only important thing about it is it close an existing request, only include that.
+If there is no existing reference but your commit is not retrogradable, only mention this.
+
+```md
+# Examples - Good practice
+
+We understand the consequences, the causes and the one who approuved it.
+> security(module): audit and update jest dependency to v15.9
+>
+> - Update jest dependency to fix critical vulnerability in test process.
+>
+> BREAKING CHANGE:
+> - Support of CommonJs import for Jest don't work anymore.
+>
+> Review: John DOE
+> Reference: #167
+
+# Examples - Bad practice
+
+We have no idea what consequences will this bring, neither why was this done nor who will take responsability.
+> security(module): audit and update jest dependency to v15.9
+```
