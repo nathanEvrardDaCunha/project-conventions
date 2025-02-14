@@ -47,7 +47,7 @@ fix: patch calculator divide by zero edge case
 |     |
 |     +-> Summary in present tense.
 |
-+-------> Type: feat, fix, refactor (see below...).
++-------> Prefix: feat, fix, refactor (see below...).
 ```
 
 
@@ -105,6 +105,19 @@ Change to build system or external dependencies.
 ## Security - `security:`
 Addressing security issues or vulnerabilities
 > security: update bcrypt to patch dependency vulnerability
+```
+
+### Importance of Scope
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+Scope allow you to explicitly tell which part of your code does your commit affect. 
+If it is too difficult to attribute only one part to your commit or the changes are globals, you can left it empty.
+Scope are optional.
+
+```md
+feat(auth): rename username validation function
+     ^--^  
+     |
+     +----> Scope: add optional context.
 ```
 
 ## Practices
