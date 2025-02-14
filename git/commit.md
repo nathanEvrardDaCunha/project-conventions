@@ -35,9 +35,9 @@ To write semantic commit, you just need to decide of the guidelines you and your
 
 Not every suggesstion in the following part below are to be implemented, nor can they be followed every single time. but while there are always cases where one need to bypass the rules they set themselves, we recommend you to abide to it as much as possible.
 
-## Conventions and Practices
+## Conventions 
 
-### Better using mainstream template over custom one
+### Mainstream semantic commit template
 
 ```md
 # Popular template used by the majority of professional
@@ -50,7 +50,8 @@ fix: patch calculator divide by zero edge case
 +-------> Type: feat, fix, refactor (see below...).
 ```
 
-### Better using mainstream commit over custom one
+
+### Mainstream semantic commit prefixs
 
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
 Most common semantic prefix
@@ -106,7 +107,9 @@ Addressing security issues or vulnerabilities
 > security: update bcrypt to patch dependency vulnerability
 ```
 
-### Better starting your commit with the relevant prefix
+## Practices
+
+### Start your commit with prefix
 
 ```md
 # Examples - Good practice
@@ -129,6 +132,4 @@ We hesitate between performance or style.
 We hesitate between build or chore.
 > add automatic update for newest prettier version
 ```
-
----
 
