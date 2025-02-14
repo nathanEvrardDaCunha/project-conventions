@@ -37,7 +37,7 @@ Not every suggesstion in the following part below are to be implemented, nor can
 
 ## 4. Conventions 
 
-### 4.1 Mandatory semantic commit template
+### 4.1. Mandatory semantic commit template
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
 
 The type, which will we see in detail below, guide us to what is the main purpose of the change commited.
@@ -47,7 +47,8 @@ The description give us additional but mandatory context about what has been cha
 ```md
 # Skeleton of mandatory commit
 
-<type>: <description>
+(type): (description)
+
 > fix: patch calculator divide by zero edge case
 ```
 
@@ -61,30 +62,37 @@ Most common semantic types
 
 ## Features - `feat:`
 New feature users can interact with.
+
 > feat: add celsius to fahrenheit unit switch
 
 ## Bug Fixes - `fix:`
 Fix any bug and code issues affecting production.
+
 > fix: patch calculator divide by zero edge case
 
 ## Documentations - `docs:`
 Change to project documentation or comments.
+
 > docs: update project semantic commit guideline
 
 ## Code Style - `style:`
 Change that doesn't affect code behavior.
+
 > style: add double commas rule to formater
 
 ## Test - `test:`
 Creation and modification of test covering code.
+
 > test: delete unit test for obsolete username validation
 
 ## Refactor - `refactor:`
 Code modification that doesn't change feature nor bug.
+
 > refactor: rename public folder to assets
 
 ## Maintenance - `chore:`
 Regular system tasks and dependance maintenance.
+
 > chore: update prettier to version 5.9
 ```
 
@@ -96,14 +104,17 @@ Less common but as important semantic types
 
 ## Performance - `perf:`
 Change that improve application performance.
+
 > perf: optimize automatic images compression for mobile
 
 ## Build - `build:`
 Change to build system or external dependencies.
+
 > build: upgrade webpack to version 5.0.0
 
 ## Security - `security:`
 Addressing security issues or vulnerabilities
+
 > security: update bcrypt to patch dependency vulnerability
 ```
 
@@ -114,34 +125,27 @@ If it is too difficult to attribute only one part to your commit or the changes 
 Scope are optional.
 
 ```md
-# Example of optional but meaningfull scope
+# Skeleton of commit with optional scope
 
-refactor(auth): rename username validation function
-     ^--^  
-     |
-     +----> Scope: add optional context.
+<type>(scope): <description>
+
+> refactor(auth): rename username validation function
 ```
 
 ### 4.4. Importance of Body
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
-- What applying the commit will do
--> What before the commit
--> What after the commit
 The body of the commit allow developer to indicate to others exactly what applying it will do. It's like telling to other what was here before and what will be done after applying it. The body is optional but recommended in general especially if you don't work alone on your project.
 
 ```md
-# Example of optional but meaningfull scope
+# Skeleton of commit with optional body
 
-feat(user-form): add celsius to kelvin toggle converter
+<type>(<scope>): <description>
 
-Introduce a toggle switch on the form page allowing the user to request data etheir as kelven or celsius unit.
+(body)
 
-Refactor form processing function to include the new "isCelsius" variable.
-
-Add pure function "convertCelsiusTokelvin()" to convert the original data to kelvin unit.
-^-------------------------------------^  
-|
-+----> Scope: add optional context.
+> docs(commit): add commit example to body section
+>
+> - Add commit example with optional body for better user comprehension.
 ```
 
 ## 5. Practices
