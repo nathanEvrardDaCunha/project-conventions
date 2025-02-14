@@ -52,10 +52,11 @@ The description give us additional but mandatory context about what has been cha
 > fix: patch calculator divide by zero edge case
 ```
 
-### 4.2. Mainstream semantic commit types
+### 4.2. Importance of Type
 
+#### 4.2.1. Popular and commonly adopted commit types
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
-Most common semantic types
+Most popular and adopted semantic types
 
 ```md
 # Most popular commit types for semantic
@@ -95,6 +96,8 @@ Regular system tasks and dependance maintenance.
 
 > chore: update prettier to version 5.9
 ```
+
+#### 4.2.2 Popular but uncommun commit types
 
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
 Less common but as important semantic types
@@ -173,6 +176,10 @@ On top of that, you can have multiple footers per commit.
 > Reviewed by: John DOE
 > Closes #145
 ```
+
+#### 4.5.1. Understanding BREAKING CHANGE
+
+#### 4.5.2. Understanding Review and Reference
 
 ## 5. Practices
 
