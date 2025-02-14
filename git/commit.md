@@ -364,3 +364,20 @@ We loss too much time trying to interpret not only the content but the unpredict
 > John Doe reviewed this commit and approve
 > Update jest dependency to fix critical vulnerability in test process.
 ```
+
+## Conclusion
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+Despite the wide adoption and use of versioning, many overlook the impact predictable and meaningfull commit can have over the productivity of individual or entire team.
+
+Contrary to what people could think, semantic commit doesn't slow developers in their iterative development process. It push them to communicate more clearly by structuring and formating their work in a predictable and clear manner.
+This help them avoid wasting huge amount of time when trying to search or understand something in the project history, if they succeed at all. All this by taking just a few more seconds to make sure they give proper meaning to their commit.  
+
+### Further Reading
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+For those you want to dig deeper into the subject, you can read thoses next articles explaining each their valuable opinion:
+- https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
+- https://sparkbox.com/foundry/semantic_commit_messages
+- https://karma-runner.github.io/1.0/dev/git-commit-msg.html
+- https://365git.tumblr.com/post/3308646748/writing-git-commit-messages
+- https://karma-runner.github.io/1.0/dev/git-commit-msg.html
+- https://www.conventionalcommits.org/en/v1.0.0/
