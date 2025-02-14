@@ -37,6 +37,19 @@ Not every suggesstion in the following part below are to be implemented, nor can
 
 ## Conventions and Practices
 
+### Better using mainstream template over custom one
+
+```md
+# Popular template used by the majority of professional
+
+fix: patch calculator divide by zero edge case
+^--^  ^-------------------------------------^
+|     |
+|     +-> Summary in present tense.
+|
++-------> Type: feat, fix, refactor (see below...).
+```
+
 ### Better using mainstream commit over custom one
 
 ```md
