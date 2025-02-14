@@ -148,6 +148,32 @@ The body of the commit allow developer to indicate to others exactly what applyi
 > - Add commit example with optional body for better user comprehension.
 ```
 
+### 4.5. Importance of Footer
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+The footer allow the developer to include optional but important additional and more flexbile information distinct from the change written in the body. 
+This information can include breaking changes forsakin the possibility to retrograde later ; if the commit is related to a pull request ; who review the commit ; the references and many more...
+On top of that, you can have multiple footers per commit.
+
+```md
+# Skeleton of commit with optional body
+
+<type>(<scope>): <description>
+
+<body>
+
+(footer(s))
+
+> security(module): audit and update jest dependency to v15.9
+>
+> - Update jest dependency to fix critical vulnerability in test process.
+>
+> BREAKING CHANGE:
+> - Support of CommonJs import for Jest don't work anymore.
+>
+> Reviewed by: John DOE
+> Closes #145
+```
+
 ## 5. Practices
 
 ### 5.1. Start your commit with type
