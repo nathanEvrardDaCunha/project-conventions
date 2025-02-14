@@ -296,7 +296,7 @@ We can only guess what will happen but not how much.
 > docs(commit): add scope recommendation in practice section 
 ```
 
-### 5.4. Include relevant informations footer whenever necessarry
+### 5.4. Include relevant informations footer when necessarry
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
 When your commit contain important information notably about changes breaking incompatible with older version, an already existing issue, request... Always add it to inform your peers.
 If you've nothing that could be included in the footer, don't add one.
@@ -322,4 +322,45 @@ We understand the consequences, the causes and the one who approuved it.
 
 We have no idea what consequences will this bring, neither why was this done nor who will take responsability.
 > security(module): audit and update jest dependency to v15.9
+```
+
+### 5.5. Always be consistent in your formating even with imperfect guideline
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+One of the most important thing in any project, no matter the subject, is to be consistent. Nothing is perfect, not your rules nor those guidelines so it's okay to not be the best or have the exception sometime.
+
+But exception doesn't justify not following throughtfully your own rules. One of the worst thing, no matter who write the code, can do is to be inconsistent.
+
+You can iterate and evolve your rules and guidelines over time, but you should always have a standardize way to do things, especially when it allow you to communicate with others.
+
+For your commit consistency, we recommend you think about the others practices sections you want to include. On top of them, also think and define:
+- How does I separate each line (generally we seperate be empty line).
+- How do we list things in the body (generally we start with a hyphen).
+- How do I write my sentences (generally we write in present tense).
+- How much is my sentence max length (generally 70 to 80 characters).
+- How big or small my commit need to be (generally 1 to 3 small things).
+
+```md
+# Examples - Good practice
+
+We can quickly understand the commit content because we know by habit how it's formated even if it can miss important informations.
+> security(module): audit and update jest dependency to v15.9
+>
+> - Update jest dependency to fix critical vulnerability in test process.
+>
+> BREAKING CHANGE:
+> - Support of CommonJs import for Jest don't work anymore.
+>
+> Review: John DOE
+> Reference: #167
+
+# Examples - Bad practice
+
+We loss too much time trying to interpret not only the content but the unpredictable format of this hazardous commit.
+> #167 - [security] - audit and update jest dependency to v15.9 (module)
+> 
+> /!\ Support of CommonJs import for Jest don't work anymore. /!\
+>
+> 
+> John Doe reviewed this commit and approve
+> Update jest dependency to fix critical vulnerability in test process.
 ```
