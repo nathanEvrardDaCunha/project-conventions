@@ -251,3 +251,25 @@ We hesitate between performance or style.
 We hesitate between build or chore.
 > add automatic update for newest prettier version
 ```
+
+### 5.2. Include relevant scope if possible
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+Including the relevant scope whenever possible is a powerful way to clearly make others understand where there is change enhancing their navigation capabilities and conflict solving skills.
+
+```md
+# Examples - Good practice
+
+We understand where things changed.
+> feat(user-statistic): add statistic display in user profil
+
+We understand where things changed.
+> test(calculator): delete obsolete sum function test
+
+# Examples - Bad practice
+
+We hesitate where are the changes.
+> security: add data form validation with trim and hash  
+
+We hesitate where are the changes.
+> test: delete profil statistic display function test
+```
