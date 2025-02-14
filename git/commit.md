@@ -114,10 +114,34 @@ If it is too difficult to attribute only one part to your commit or the changes 
 Scope are optional.
 
 ```md
-feat(auth): rename username validation function
+# Example of optional but meaningfull scope
+
+refactor(auth): rename username validation function
      ^--^  
      |
      +----> Scope: add optional context.
+```
+
+### Importance of Body
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+- What applying the commit will do
+-> What before the commit
+-> What after the commit
+The body of the commit allow developer to indicate to others exactly what applying it will do. It's like telling to other what was here before and what will be done after applying it. The body is optional but recommended in general especially if you don't work alone on your project.
+
+```md
+# Example of optional but meaningfull scope
+
+feat(user-form): add celsius to kelvin toggle converter
+
+Introduce a toggle switch on the form page allowing the user to request data etheir as kelven or celsius unit.
+
+Refactor form processing function to include the new "isCelsius" variable.
+
+Add pure function "convertCelsiusTokelvin()" to convert the original data to kelvin unit.
+^-------------------------------------^  
+|
++----> Scope: add optional context.
 ```
 
 ## Practices
