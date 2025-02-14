@@ -224,7 +224,7 @@ One way to clearly inform people about what need to be keep track of and what is
 
 ## 5. Practices
 
-### 5.1. Include relevant type at the start
+### 5.1. Always include relevant type at the start
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
 Including the relevant type at the start of your commit is one of the best way to quickly indicate to others developers what you did so they can quickly navigate and find what they need.
 
@@ -252,7 +252,7 @@ We hesitate between build or chore.
 > add automatic update for newest prettier version
 ```
 
-### 5.2. Include relevant scope if possible
+### 5.2. Include relevant scope whenever possible
 <!-- TODO: Refine explanation to be more formal, detailed and professional -->
 Including the relevant scope whenever possible is a powerful way to clearly make others understand where there is change enhancing their navigation capabilities and conflict solving skills.
 
@@ -272,4 +272,26 @@ We hesitate where are the changes.
 
 We hesitate where are the changes.
 > test: delete profil statistic display function test
+```
+
+### 5.3. Always include relevant body
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+The body can always be part of your commit so it's a good idea to always write one. it hugely enhance the capabilities of your peers to understand the consequence of your action and work before applying or using it.
+
+```md
+# Examples - Good practice
+
+We understand what will happen.
+> docs(commit): add scope recommendation in practice section
+>
+> - Add scope recommendation part in practice section.
+>
+> - Add introduction to scope recommendation explaining it's purpose.
+>
+> - Add example to scope recommendation to enhance user understanding.
+
+# Examples - Bad practice
+
+We can only guess what will happen but not how much.
+> docs(commit): add scope recommendation in practice section 
 ```
