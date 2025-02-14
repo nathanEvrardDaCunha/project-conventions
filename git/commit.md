@@ -52,48 +52,59 @@ fix: patch calculator divide by zero edge case
 
 ### Better using mainstream commit over custom one
 
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+Most common semantic prefix
+
 ```md
-# Features - `feat:`
+# Most popular commit prefix for semantic
+
+## Features - `feat:`
 New feature users can interact with.
 > feat: add celsius to fahrenheit unit switch
 
-# Bug Fixes - `fix:`
+## Bug Fixes - `fix:`
 Fix any bug and code issues affecting production.
 > fix: patch calculator divide by zero edge case
 
-# Documentations - `docs:`
+## Documentations - `docs:`
 Change to project documentation or comments.
 > docs: update project semantic commit guideline
 
-# Code Style - `style:`
+## Code Style - `style:`
 Change that doesn't affect code behavior.
 > style: add double commas rule to formater
 
-# Test - `test:`
+## Test - `test:`
 Creation and modification of test covering code.
 > test: delete unit test for obsolete username validation
 
-# Refactor - `refactor:`
+## Refactor - `refactor:`
 Code modification that doesn't change feature nor bug.
 > refactor: rename public folder to assets
 
-# Maintenance - `chore:`
+## Maintenance - `chore:`
 Regular system tasks and dependance maintenance.
 > chore: update prettier to version 5.9
+```
 
-# Performance - `perf:`
+<!-- TODO: Refine explanation to be more formal, detailed and professional -->
+Less common but as important semantic prefix
+
+```md
+# Less popular but important commit prefix for semantic
+
+## Performance - `perf:`
 Change that improve application performance.
 > perf: optimize automatic images compression for mobile
 
-# Build - `build:`
+## Build - `build:`
 Change to build system or external dependencies.
 > build: upgrade webpack to version 5.0.0
 
-# Security - `security:`
+## Security - `security:`
 Addressing security issues or vulnerabilities
-> security: update bcrypt to patch password hashing vulnerability
+> security: update bcrypt to patch dependency vulnerability
 ```
-
 
 ### Better starting your commit with the relevant prefix
 
