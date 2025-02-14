@@ -8,9 +8,36 @@ This file serves as a curated collection of git commit conventions and best prac
 
 The primary goal of this collection is to aggregate useful commit practices and conventions in one accessible location. While these guidelines may not be universally applicable, they offer valuable insights for developers looking to improve their commit quality.
 
+## Introduction to Semantic Commit
+
+<!-- TODO: Make this section more formal and professional in tone -->
+<!-- IDEA: It might be possible to make it tool agnostic but would need to rewrite things other than for git and for the majority of versioning tools. -->
+
+### Why do we write Git Semantic Commit ?
+
+Git is easy to grasp and use. But the way you write code for your hooby project, small professional project or large codebase can vary considerably. Because of many factor like project and team size, it become increasingly difficult to make meaningfull commit following guideline everyone understand. 
+
+Not only that, but keeping track of which commit make the cut to the new version of the application (related to Semantic versioning) ca nbe tricky without proper guidelines or commonly adopted practices accros the industry.
+
+That where Git Semantic Commit appear.
+
+### What is Git Semantic Commit ?
+
+Git Semantic Commit (complementary yet distinct from Semantic Versioning concept) are common practices helping team and individuals to write more meaningful commit by including relevant element like prefix, description, scope, body, footer... 
+
+Thanks to those, it become easier for teams to quickly navigate through the entire repository history of any project and quickly access the commit they are searching.
+
+On top of that, thanks to some automation tool, writing commit following a clear format can help us automatically know what to include or exclude from releases of our project, especially when the new version include breaking change for the older one.
+
+### How do we use Git Semantic Commit ?
+
+To write semantic commit, you just need to decide of the guidelines you and your team wish to use in your project and follow them as rigourously as possible.
+
+Not every suggesstion in the following part below are to be implemented, nor can they be followed every single time. but while there are always cases where one need to bypass the rules they set themselves, we recommend you to abide to it as much as possible.
+
 ## Conventions and Practices
 
-### Prefer to use mainstream commit over custom one
+### Better using mainstream commit over custom one
 
 ```md
 # Features - `feat:`
@@ -55,11 +82,11 @@ Addressing security issues or vulnerabilities
 ```
 
 
-### Prefer start your commit with the relevant prefix
+### Better starting your commit with the relevant prefix
 
 ```md
 # Examples - Good practice
-We understand what is added and why.
+We understand what is added and who.
 > feat: add account deletion for free user
 
 We understand what is updated and where.
@@ -81,21 +108,3 @@ We hesitate between build or chore.
 
 ---
 
-<!-- 
-TODO:
-### Prefer imperative present tense
-### Prefer including optional scope refering to a codebase section
-### Prefer mentioning optional BREAKING CHANGE and !
-### Prefer including optional commit description
-
-TODO: Explain for each section, including the existing one, why is it important to do thing like this.
-
-TODO: Create a table of content at the start of the file.
-
-IDEA: Add a conclusion with one or multiple practical and possibly opinionated example on the habit to take for implementing this in practice. 
-
-TODO:
-Include reference such as:
-- https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
-- https://www.conventionalcommits.org/en/v1.0.0/
-- https://semver.org/#summary -->
