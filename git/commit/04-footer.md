@@ -96,3 +96,29 @@ We understand the consequences, the causes and the one who approuved it.
 We have no idea what consequences will this bring, neither why was this done nor who will take responsability.
 > security(module): audit and update jest dependency to v15.9
 ```
+
+
+
+
+---
+---
+---
+---
+---
+
+## Introduction
+### What are Commit Footers?
+### Why Should We Use Them?
+### How Do We Use Them?
+## Common Commit Footers
+### Indicating Breaking Changes
+### Referencing Request
+### Blaming Responsability
+## Implementation Guidelines
+### Adoption Considerations
+### Best Practices
+#### Maintain Format Consistency
+#### Inform Breaking Changes
+#### Reference Existing Request
+#### Take Responsability
+#### Document Conventions
