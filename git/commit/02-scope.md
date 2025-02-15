@@ -41,10 +41,32 @@ We hesitate where are the changes.
 ---
 ---
 
+
 ## Introduction
 ### What are Commit Scopes?
+Commit scopes are optional contextual identifiers used in version control commit messages to specify the component, module, or area of the codebase affected by changes. These scopes have emerged as a vital element in modern development workflows, providing precise location context for modifications within large-scale projects.
+
+A commit scope is a parenthetical qualifier that follows the commit type, identifying the specific section of the codebase being modified. This additional context enables more granular tracking and organization of changes across complex systems.
+
 ### Why Should We Use Them?
+Commit scopes have become increasingly important in larger projects because they provide immediate location context without requiring code review or file inspection. This contextual information serves several critical purposes:
+
+1. It enables developers to quickly identify relevant changes in their area of responsibility
+2. It facilitates more efficient code review by highlighting the system components affected
+3. It improves change tracking by categorizing modifications by project area
+4. It supports better release management by organizing changes by component
+
+The effort invested in properly scoping commits delivers substantial benefits through improved change navigation and enhanced project organization, particularly in larger codebases with multiple components.
+
 ### How Do We Use Them?
+Implementing commit scopes requires understanding your project's architecture and establishing consistent naming conventions. While adding scopes is straightforward syntactically, the challenge lies in defining and maintaining meaningful scope boundaries that reflect your project's structure.
+
+```md
+<type>(<scope>): <description>
+```
+
+While some projects maintain a strict set of predefined scopes aligned with their architecture (e.g., api, ui, core, auth), others allow more flexible scope definitions based on feature areas or team ownership. This customization should align with your project's organization while maintaining clarity and consistency.
+
 ## Implementation Guidelines
 ### Adoption Considerations
 ### Best Practices
