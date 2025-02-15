@@ -36,3 +36,21 @@ We understand what will happen.
 We can only guess what will happen but not how much.
 > docs(commit): add scope recommendation in practice section 
 ```
+
+
+---
+---
+---
+---
+---
+
+## Introduction
+### What are Commit Bodies?
+### Why Should We Use Them?
+### How Do We Use Them?
+## Implementation Guidelines
+### Adoption Considerations
+### Best Practices
+#### Maintain Format Consistency
+#### Write Appropriate Body
+#### Document Conventions
