@@ -1,96 +1,178 @@
-### 4.2. Importance of Type
+## Introduction
+### What are Commit Types?
+Commit types are standardized prefixes used in version control commit messages to categorize the nature of changes being committed. These types have become a fundamental component of modern development workflows, adopted widely across the industry due to their effectiveness in communicating change intent.
 
-#### 4.2.1. Popular and commonly adopted commit types
-<!-- TODO: Refine explanation to be more formal, detailed and professional -->
-Most popular and adopted semantic types
+A commit type is a predefined identifier that precisely indicates the category of modifications contained within a specific commit, enabling efficient code review and change tracking processes.
 
-```md
-# Most popular commit types for semantic
+### Why Should We Use Them?
+Commit types have gained widespread adoption because they provide immediate context about the nature of changes without requiring detailed commit message analysis. This standardized categorization serves multiple purposes:
 
-## Features - `feat:`
-New feature users can interact with.
+1. It enables rapid assessment of change impact during code reviews
+2. It facilitates automated changelog generation and semantic versioning
+3. It improves project maintenance by making commit history more navigable and meaningful
 
-> feat: add celsius to fahrenheit unit switch
+The initial investment in properly categorizing commits yields significant returns through improved collaboration efficiency and enhanced project maintainability.
 
-## Bug Fixes - `fix:`
-Fix any bug and code issues affecting production.
-
-> fix: patch calculator divide by zero edge case
-
-## Documentations - `docs:`
-Change to project documentation or comments.
-
-> docs: update project semantic commit guideline
-
-## Code Style - `style:`
-Change that doesn't affect code behavior.
-
-> style: add double commas rule to formater
-
-## Test - `test:`
-Creation and modification of test covering code.
-
-> test: delete unit test for obsolete username validation
-
-## Refactor - `refactor:`
-Code modification that doesn't change feature nor bug.
-
-> refactor: rename public folder to assets
-
-## Maintenance - `chore:`
-Regular system tasks and dependance maintenance.
-
-> chore: update prettier to version 5.9
-```
-
-#### 4.2.2 Popular but uncommun commit types
-
-<!-- TODO: Refine explanation to be more formal, detailed and professional -->
-Less common but as important semantic types
+### How Do We Use Them?
+Implementing commit types requires understanding both the standardized conventions and their practical application. While the syntax is straightforward, the challenge lies in accurately categorizing changes to reflect their primary purpose.
 
 ```md
-# Less popular but important commit types for semantic
-
-## Performance - `perf:`
-Change that improve application performance.
-
-> perf: optimize automatic images compression for mobile
-
-## Build - `build:`
-Change to build system or external dependencies.
-
-> build: upgrade webpack to version 5.0.0
-
-## Security - `security:`
-Addressing security issues or vulnerabilities
-
-> security: update bcrypt to patch dependency vulnerability
+<type>: <description>
 ```
 
-### 5.1. Always include relevant type at the start
-<!-- TODO: Refine explanation to be more formal, detailed and professional -->
-Including the relevant type at the start of your commit is one of the best way to quickly indicate to others developers what you did so they can quickly navigate and find what they need.
+While industry standards like Conventional Commits provide a well-defined set of commit types (e.g., feat, fix, docs, style, refactor), many teams extend these baseline conventions with additional types specific to their workflow needs. This customization should build upon, rather than replace, established conventions to maintain interoperability and clarity.
+
+## Common Commit Types
+### Industry-Standard Commit Types
+The following commit types represent the foundational elements of semantic commit messages, widely recognized and adopted across the software development industry. These types form the core vocabulary for describing code changes in version control systems.
+
+#### `feat`
+Indicates the introduction of new functionality or features intended for end users. This type specifically denotes additions that enhance the application's capabilities from a user perspective.
 
 ```md
-# Examples - Good practice
-
-We understand what is added and who.
-> feat: add account deletion for free user
-
-We understand what is updated and where.
-> test: update test to get account information
-
-We understand what is rewriten and how.
-> refactor: rewrite billing system to singleton pattern
-
-# Examples - Bad practice
-
-We hesitate between security or bug fix.
-> patch validation dependancies vulnerabilities
-
-We hesitate between performance or style.
-> remove css normalize file space and line break  
-
-We hesitate between build or chore.
-> add automatic update for newest prettier version
+feat: implement celsius to fahrenheit conversion feature
 ```
+
+#### `fix`
+Designates corrections to bugs or runtime issues that directly impact user experience. This type should be reserved for changes that address functional defects in the application's behavior.
+
+```md
+fix: resolve calculator division by zero error
+```
+
+#### `docs`
+Encompasses all documentation-related modifications, including inline code comments, README files, API documentation, and development guidelines. Documentation changes should be committed separately from code changes to maintain clear revision history.
+
+```md
+docs: update semantic commit guidelines with examples
+```
+
+#### `style`
+Represents changes to code formatting, white space, and other stylistic elements that do not affect runtime behavior. These changes typically align with coding standards and style guides without modifying functionality.
+
+```md
+style: implement consistent double quote usage across codebase
+```
+
+#### `test`
+Relates to the addition, modification, or removal of test cases and testing infrastructure. This type focuses exclusively on testing-related changes without altering production code behavior.
+
+```md
+test: implement unit tests for password validation edge cases
+```
+
+#### `refactor`
+Indicates code modifications that improve non-functional attributes such as readability, modularity, or performance, while preserving existing functionality. These changes restructure implementation details without altering the external behavior.
+
+```md
+refactor: decompose user validation logic into separate services
+```
+
+#### `chore`
+Encompasses maintenance tasks, dependency updates, and infrastructure changes that support development processes without directly affecting application features or business logic.
+
+```md
+chore: upgrade prettier dependency to version 5.9
+```
+
+### Extended Commit Types
+While the core commit types cover most development scenarios, the following extended types address specific aspects of software development. When implementing these types, document them clearly in your project's contribution guidelines to ensure consistent usage across the team.
+
+#### `perf`
+Denotes changes specifically focused on performance optimization, whether through code refactoring, algorithm improvements, or resource utilization enhancements. This type should be used exclusively for performance-related modifications that can be measured and verified.
+
+```md
+perf: optimize image compression algorithm for mobile devices
+```
+
+#### `build`
+Identifies changes to the project's build system, compilation processes, or dependency management configurations. These modifications typically affect development workflows without impacting the production runtime environment.
+
+```md
+build: migrate webpack configuration to version 5.0.0
+```
+
+#### `security`
+Addresses security vulnerabilities, implements security measures, or updates security-related dependencies. This type should be used judiciously and typically requires careful consideration of deployment timing and impact.
+
+```md
+security: patch bcrypt dependency to address CVE-2023-xxxx
+```
+
+## Implementation Guidelines
+### Adoption Considerations
+Before implementing semantic commit conventions, carefully evaluate their applicability to your project's specific context and team dynamics. While these practices represent industry standards, their adoption should align with your project's needs and team capabilities.
+
+Consider the following factors when evaluating these guidelines:
+- Project scale and complexity
+- Team size and experience level
+- Existing workflows and processes
+- Long-term maintenance requirements
+
+Organizations should customize these practices to match their specific requirements while maintaining the core principles of clarity and consistency.
+
+### Best Practices
+#### Maintain Format Consistency
+Consistency in commit message formatting is fundamental to achieving the benefits of semantic commits. Arbitrary or selective application of conventions diminishes their value and can lead to confusion.
+
+While exceptions may occasionally be necessary, they should be rare and well-documented. Establish clear protocols for handling edge cases while maintaining overall consistency.
+
+```md
+
+### Incorrect Format Examples
+implement unit tests for password validation edge cases 
+> Missing commit type prefix
+
+[security] 
+> Incorrect type format and missing description
+
+build // migrate webpack configuration to version 5.0.0
+> Incorrect separator usage
+
+### Correct Format Examples
+test: implement unit tests for password validation edge cases
+security: patch bcrypt dependency to address CVE-2023-xxxx
+build: migrate webpack configuration to version 5.0.0
+> Each follows the standard format: <type>: <description>
+```
+
+#### Select Appropriate Types and Descriptions
+Commit messages should precisely communicate change intent through careful selection of commit types and clear descriptions. Common pitfalls include:
+- Selecting overly generic types
+- Writing vague or overloaded descriptions
+- Combining unrelated changes in a single commit
+
+Each commit should represent a logical unit of change. While it's acceptable to include multiple related modifications, they should serve a common purpose. Use the presence of conjunctions ("and") in descriptions as an indicator that your commit might need division.
+
+```md
+### Suboptimal Examples
+test: add tests for user register form
+> Lacks specificity about test type and scope
+
+feat:
+> Missing description entirely
+
+feat: patch divide by zero edge case calculation in my utils files
+> Incorrect type selection for a bug fix
+
+### Optimal Examples
+test: add unit tests for user register form validation functions
+feat: add admin login form with jwt token validation
+fix: patch divide by zero edge case calculation in my utils files
+> Each combines appropriate type with specific, focused description
+```
+
+#### Document Conventions
+Maintaining comprehensive documentation of your commit message conventions is essential for:
+- Ensuring consistent implementation across team members
+- Facilitating onboarding of new contributors
+- Supporting long-term project maintenance
+- Enabling effective code review processes
+
+Documentation should include:
+- Adopted commit types and their definitions
+- Format requirements and examples
+- Exception handling procedures
+- Team-specific customizations
+
+While documentation quality can vary, ensure it provides clear guidance for both current team members and future contributors. Focus on clarity and accessibility over stylistic perfection.
