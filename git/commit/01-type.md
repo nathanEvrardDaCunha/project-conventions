@@ -31,6 +31,7 @@ Indicates the introduction of new functionality or features intended for end use
 
 ```md
 feat: implement celsius to fahrenheit conversion feature
+feat: implement login authentification page for users
 ```
 
 #### `fix`
@@ -38,6 +39,7 @@ Designates corrections to bugs or runtime issues that directly impact user exper
 
 ```md
 fix: resolve calculator division by zero error
+fix: patch celsius to fahrenheit conversion edge case
 ```
 
 #### `docs`
@@ -45,6 +47,7 @@ Encompasses all documentation-related modifications, including inline code comme
 
 ```md
 docs: update semantic commit guidelines with examples
+docs: create project guideline about semantic commit
 ```
 
 #### `style`
@@ -52,6 +55,7 @@ Represents changes to code formatting, white space, and other stylistic elements
 
 ```md
 style: implement consistent double quote usage across codebase
+style: format user creation service with prettier formater
 ```
 
 #### `test`
@@ -59,6 +63,7 @@ Relates to the addition, modification, or removal of test cases and testing infr
 
 ```md
 test: implement unit tests for password validation edge cases
+test: delete integration test about obsolete chat moderation
 ```
 
 #### `refactor`
@@ -66,6 +71,7 @@ Indicates code modifications that improve non-functional attributes such as read
 
 ```md
 refactor: decompose user validation logic into separate services
+refactor: rewrite data calculation functions as pure functions
 ```
 
 #### `chore`
@@ -73,6 +79,7 @@ Encompasses maintenance tasks, dependency updates, and infrastructure changes th
 
 ```md
 chore: upgrade prettier dependency to version 5.9
+chore: create automatic daily linter report for javascript files 
 ```
 
 ### Extended Commit Types
@@ -83,6 +90,7 @@ Denotes changes specifically focused on performance optimization, whether throug
 
 ```md
 perf: optimize image compression algorithm for mobile devices
+perf: replace linear user search by divide and conquer algorithm
 ```
 
 #### `build`
@@ -90,6 +98,7 @@ Identifies changes to the project's build system, compilation processes, or depe
 
 ```md
 build: migrate webpack configuration to version 5.0.0
+build: download vitest package from npm for testing purpose
 ```
 
 #### `security`
@@ -97,6 +106,7 @@ Addresses security vulnerabilities, implements security measures, or updates sec
 
 ```md
 security: patch bcrypt dependency to address CVE-2023-xxxx
+security: update jest package to newer version to prevent zero-day
 ```
 
 ## Implementation Guidelines
@@ -118,7 +128,6 @@ Consistency in commit message formatting is fundamental to achieving the benefit
 While exceptions may occasionally be necessary, they should be rare and well-documented. Establish clear protocols for handling edge cases while maintaining overall consistency.
 
 ```md
-
 ### Incorrect Format Examples
 implement unit tests for password validation edge cases 
 > Missing commit type prefix
