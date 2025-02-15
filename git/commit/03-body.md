@@ -1,5 +1,4 @@
 ## Introduction
-
 ### What are Commit Bodies?
 Commit bodies are detailed explanations that follow the commit message's first line, providing comprehensive context about the changes being committed. While the commit type, scope, and description offer a quick summary, the body serves as the primary vehicle for communicating the full scope and implications of modifications.
 
@@ -27,7 +26,6 @@ Implementing effective commit bodies requires understanding both formatting conv
 While projects may have specific requirements for body content and formatting, maintaining clear separation between the summary line and body text is a universal convention. Bodies should focus on explaining the rationale behind changes, their impacts, and any essential context for understanding the modifications.
 
 ## Implementation Guidelines
-
 ### Adoption Considerations
 Before implementing detailed commit body conventions, evaluate their applicability to your project's context and team dynamics. While comprehensive documentation benefits most projects, the level of detail and structure should align with your team's needs and capabilities.
 
@@ -41,7 +39,6 @@ Consider the following factors when establishing body guidelines:
 Organizations should adapt these practices to match their specific requirements while maintaining the core principles of clarity and completeness in documentation.
 
 ### Best Practices
-
 #### Maintain Format Consistency
 Consistency in commit body formatting is essential for maintaining readable and searchable commit histories. Inconsistent formatting can make it difficult to locate and understand important project decisions and changes.
 
