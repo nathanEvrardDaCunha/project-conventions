@@ -34,3 +34,20 @@ We hesitate where are the changes.
 We hesitate where are the changes.
 > test: delete profil statistic display function test
 ```
+
+---
+---
+---
+---
+---
+
+## Introduction
+### What are Commit Scopes?
+### Why Should We Use Them?
+### How Do We Use Them?
+## Implementation Guidelines
+### Adoption Considerations
+### Best Practices
+#### Maintain Format Consistency
+#### Select Appropriate Scope
+#### Document Conventions
