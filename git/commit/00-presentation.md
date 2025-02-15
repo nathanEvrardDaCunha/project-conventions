@@ -72,3 +72,11 @@ This measured approach allows teams to adapt to the conventions while maintainin
 Begin your journey with semantic commits by reviewing the type conventions in types.md. This foundation will prepare you for implementing the complete semantic commit structure in your development workflow.
 
 Remember that while these documents provide comprehensive guidance, you should adapt these practices to match your project's specific needs while maintaining the core principles of clarity and consistency in version control communication.
+
+### Further Reading
+Dig deeper into the subject through recommended articles:
+- https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
+- https://sparkbox.com/foundry/semantic_commit_messages
+- https://karma-runner.github.io/1.0/dev/git-commit-msg.html
+- https://365git.tumblr.com/post/3308646748/writing-git-commit-messages
+- https://www.conventionalcommits.org/en/v1.0.0/
