@@ -1,47 +1,3 @@
-
-### 4.3. Importance of Scope
-<!-- TODO: Refine explanation to be more formal, detailed and professional -->
-Scope allow you to explicitly tell which part of your code does your commit affect. 
-If it is too difficult to attribute only one part to your commit or the changes are globals, you can left it empty.
-Scope are optional.
-
-```md
-# Skeleton of commit with optional scope
-
-<type>(scope): <description>
-
-> refactor(auth): rename username validation function
-```
-
-### 5.2. Include relevant scope whenever possible
-<!-- TODO: Refine explanation to be more formal, detailed and professional -->
-Including the relevant scope whenever possible is a powerful way to clearly make others understand where there is change enhancing their navigation capabilities and conflict solving skills.
-
-```md
-# Examples - Good practice
-
-We understand where things changed.
-> feat(user-statistic): add statistic display in user profil
-
-We understand where things changed.
-> test(calculator): delete obsolete sum function test
-
-# Examples - Bad practice
-
-We hesitate where are the changes.
-> security: add data form validation with trim and hash  
-
-We hesitate where are the changes.
-> test: delete profil statistic display function test
-```
-
----
----
----
----
----
-
-
 ## Introduction
 ### What are Commit Scopes?
 Commit scopes are optional contextual identifiers used in version control commit messages to specify the component, module, or area of the codebase affected by changes. These scopes have emerged as a vital element in modern development workflows, providing precise location context for modifications within large-scale projects.
@@ -156,7 +112,77 @@ fix(monitoring): correct metric collection intervals
 
 ## Implementation Guidelines
 ### Adoption Considerations
+Before implementing semantic commit conventions, carefully evaluate their applicability to your project's specific context and team dynamics. While these practices represent industry standards, their adoption should align with your project's needs and team capabilities.
+
+Consider the following factors when evaluating these guidelines:
+- Project scale and complexity
+- Team size and experience level
+- Existing workflows and processes
+- Long-term maintenance requirements
+
+Organizations should customize these practices to match their specific requirements while maintaining the core principles of clarity and consistency.
+
 ### Best Practices
-#### Maintain Format Consistency
-#### Select Appropriate Scope
-#### Document Conventions
+#### Maintain Scope Format Consistency
+Consistency in commit scope formatting is essential for realizing the full benefits of semantic commits. Inconsistent or arbitrary scope usage reduces clarity and complicates project maintenance.
+
+When exceptions to standard scope formatting become necessary, document them clearly and ensure they remain rare. Establish explicit guidelines for handling special cases while preserving overall consistency in your scope usage.
+
+```md
+### Incorrect Format Examples
+feat(userAuth): implement password reset
+> Inconsistent scope naming (should be auth)
+
+fix[api-server] resolve timeout issue
+> Incorrect scope delimiter syntax
+
+feat(front-end/components): add navigation menu
+> Overly specific scope hierarchy
+
+### Correct Format Examples
+feat(auth): implement password reset flow
+fix(api): resolve request timeout handling
+feat(ui): implement responsive navigation menu
+> Each follows the standard format: <type>(<scope>): <description>
+```
+
+#### Select Appropriate Scopes and Boundaries
+Commit scopes should precisely identify the affected system components while maintaining appropriate granularity. Common scope-related challenges include:
+- Defining overly broad scopes that lack specificity
+- Creating excessively granular scopes that fragment the codebase
+- Mixing different architectural levels in scope definitions
+
+Each scope should represent a logical boundary in your system architecture. While components may have internal subdivisions, commit scopes should align with your project's primary architectural divisions to maintain clarity and usefulness.
+
+```md
+### Suboptimal Scope Examples
+feat(system): add user authentication
+> Scope too broad, lacks specific context
+
+fix(userProfileModalButton): correct click handler
+> Scope too granular, should use broader component scope
+
+feat(api/auth/jwt): implement token refresh
+> Unnecessarily deep scope hierarchy
+
+### Optimal Scope Examples
+feat(auth): implement OAuth authentication flow
+fix(ui): resolve profile modal event handling
+feat(api): add JWT token refresh endpoint
+> Each uses appropriate architectural boundaries for scope
+```
+
+#### Document Scope Conventions
+Maintaining comprehensive documentation of your commit scope conventions is crucial for:
+- Ensuring consistent scope selection across teams
+- Providing clear component boundaries
+- Supporting architectural understanding
+- Facilitating effective code organization
+
+Documentation should address:
+- Defined scope categories and their boundaries
+- Scope naming conventions and formats
+- Component hierarchy and scope relationships
+- Team-specific scope customizations
+
+Your scope documentation should provide clear guidance for identifying appropriate component boundaries and selecting the right scope level for changes. Focus on creating a practical, maintainable scope hierarchy that reflects your system's architecture.
