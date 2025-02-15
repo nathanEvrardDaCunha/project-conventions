@@ -67,6 +67,93 @@ Implementing commit scopes requires understanding your project's architecture an
 
 While some projects maintain a strict set of predefined scopes aligned with their architecture (e.g., api, ui, core, auth), others allow more flexible scope definitions based on feature areas or team ownership. This customization should align with your project's organization while maintaining clarity and consistency.
 
+## Common Commit Scopes
+### Core Application Scopes
+The following scope categories represent fundamental areas commonly found in software applications. These scopes provide a structured way to identify the specific components affected by changes in version control systems.
+
+#### `auth`
+Indicates changes related to authentication and authorization systems, including user authentication flows, permission management, and security token handling.
+
+```md
+feat(auth): implement JWT refresh token mechanism
+fix(auth): resolve session timeout handling
+```
+
+#### `api`
+Encompasses modifications to API endpoints, request handling, response formatting, and API-specific middleware. This scope helps track changes to the application's external interfaces.
+
+```md
+feat(api): add pagination to user search endpoint
+fix(api): correct response format for error states
+```
+
+#### `ui`
+Designates changes to user interface components, layouts, styles, and client-side interactions. This scope typically covers frontend-specific modifications.
+
+```md
+feat(ui): implement responsive navigation menu
+fix(ui): resolve button alignment in mobile view
+```
+
+#### `core`
+Represents changes to the application's core business logic, fundamental services, and critical operational components.
+
+```md
+feat(core): implement transaction processing engine
+fix(core): correct calculation precision in billing module
+```
+
+#### `db`
+Relates to database operations, schema modifications, query optimizations, and data migration scripts.
+
+```md
+feat(db): add indices for user search queries
+fix(db): optimize join operations in reporting queries
+```
+
+#### `config`
+Identifies changes to application configuration, environment settings, and system parameters.
+
+```md
+feat(config): add support for custom logging levels
+fix(config): correct environment variable handling
+```
+
+#### `utils`
+Encompasses modifications to utility functions, helper methods, and shared tools used across the application.
+
+```md
+feat(utils): add date formatting utilities
+fix(utils): correct string sanitization function
+```
+
+### Infrastructure Scopes
+While core scopes cover application components, the following scopes address infrastructure and operational aspects. These should be documented in your project's guidelines to ensure consistent usage.
+
+#### `deploy`
+Indicates changes related to deployment processes, infrastructure configurations, and hosting environments.
+
+```md
+feat(deploy): implement blue-green deployment strategy
+fix(deploy): resolve CDN cache invalidation
+```
+
+#### `ci`
+Represents modifications to continuous integration pipelines, build processes, and automated testing infrastructure.
+
+```md
+feat(ci): add performance testing to pipeline
+fix(ci): correct test environment configuration
+```
+
+#### `monitoring`
+Addresses changes to application monitoring, logging systems, and observability infrastructure.
+
+```md
+feat(monitoring): implement custom error tracking
+fix(monitoring): correct metric collection intervals
+```
+
 ## Implementation Guidelines
 ### Adoption Considerations
 ### Best Practices
